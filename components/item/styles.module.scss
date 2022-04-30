@@ -1,0 +1,64 @@
+@import "../../commons/styles/variables.scss";
+@import "../../commons/styles/colors.scss";
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 1%;
+  border-bottom: 1px solid $gray-light;
+  padding: $space-small;
+
+  .img {
+    width: 160px;
+    height: 100%;
+    margin-bottom: 0.5%;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .description {
+    width: 50%;
+    margin-top: 0.5%;
+    color: $gray-strong;
+    cursor: pointer;
+
+    .title {
+      font-size: $font-size-product;
+      font-weight: 300;
+    }
+
+    .price {
+      font-size: $font-size-main-title;
+      font-weight: 400;
+      margin-bottom: $space-large;
+    }
+  }
+
+  .city {
+    width: 10%;
+    font-size: $font-size-small;
+    color: $gray-text;
+  }
+}
+
+@media (max-width: 900px) {
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2%;
+
+    .city {
+      margin-bottom: 2%;
+    }
+  }
+}

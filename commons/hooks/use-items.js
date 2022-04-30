@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { CATEGORIES } from "../constants/categories";
 import axios from "axios";
 
 const useItems = (name) => {
@@ -10,13 +11,10 @@ const useItems = (name) => {
     async function fetch() {
       setLoading(true);
       const apiUrl = "https://api.mercadolibre.com/sites/MLA/search?q=:";
-      const { data } = await axios.get(apiUrl, { params: { name } });
+      const { data } = await axios.get(`${apiUrl}${name}`);
 
-      console.log("useEffect - data", data);
-      console.log("useEffect -name", name);
-
-      setItems(data.items);
-      setCategories(data.categories);
+      setItems(data?.results);
+      setCategories(CATEGORIES);
       setLoading(false);
     }
 

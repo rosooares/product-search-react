@@ -13,7 +13,6 @@ const SearchBar = ({ placeholder, onTypeSearch }) => {
         <input name="" placeholder={placeholder} onChange={handleChange} />
       </div>
       <button value="" type="button" className={styles.searchButton}>
-        {/* <img src={SearchIcon} alt="search" /> */}
         <Image src={SearchIcon} alt="search" />
       </button>
     </div>

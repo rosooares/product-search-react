@@ -12,8 +12,13 @@
 }
 
 .headerContainer {
-  width: $container-size;
+  width: 100%;
+  max-width: $container-size;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.iconButton {
+  cursor: pointer;
 }

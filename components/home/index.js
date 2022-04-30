@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import isEmpty from "lodash.isempty";
+import { useRouter } from "next/router";
 import Header from "../header";
 import Loading from "../loading";
 import ItemsList from "../items-list";
@@ -7,15 +8,19 @@ import useItems from "../../commons/hooks/use-items";
 import styles from "./styles.module.scss";
 
 const Home = () => {
-  const [name, setName] = useState();
+  const { query, push } = useRouter();
   const onTypeSearch = (value) => {
-    setName(value);
+    push({
+      pathname: "/items",
+      query: {
+        search: value,
+      },
+    });
   };
 
-  const { items, loading, categories } = useItems(name);
+  const { items, loading, categories } = useItems(query.search);
   const hideItems = !isEmpty(items) && !loading;
-  console.log("items", items);
-  console.log("categories", categories);
+
   return (
     <>
       <Header onTypeSearch={onTypeSearch} />

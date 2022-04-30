@@ -17,7 +17,7 @@ const Header = ({ onTypeSearch }) => {
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
-        <div onClick={goToHome}>
+        <div className={styles.iconButton} onClick={goToHome}>
           <Image src={Logo} alt="Meli" width={44} height={32} />
         </div>
 

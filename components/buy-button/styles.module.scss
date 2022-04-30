@@ -1,0 +1,28 @@
+@import "../../commons//styles/variables.scss";
+@import "../../commons//styles/colors.scss";
+
+.buyButton {
+  font-size: $font-size-product;
+  font-weight: 600;
+  line-height: 48px;
+  padding: 0 24px;
+  height: 48px;
+  text-align: center;
+  border-radius: 6px;
+  -webkit-transition: 0.18s ease-out;
+  transition: 0.18s ease-out;
+  display: inline-block;
+  width: auto;
+  -webkit-font-smoothing: antialiased;
+  border-color: transparent;
+  background-color: $blue;
+  color: $white;
+
+  &:hover {
+    cursor: pointer;
+    border-color: transparent;
+    background-color: $blue;
+    color: $white;
+    transition: background-color 0.2s ease-in;
+  }
+}
