@@ -1,0 +1,19 @@
+@import "../../commons/styles/variables.scss";
+@import "../../commons/styles/colors.scss";
+
+.header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: $yellow;
+}
+
+.headerContainer {
+  width: $container-size;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

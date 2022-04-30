@@ -1,0 +1,26 @@
+@import "../../commons/styles/variables.scss";
+@import "../../commons/styles/colors.scss";
+
+.breadcrumbs {
+  width: $container-size;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  color: $gray-strong;
+
+  &Separator {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &LastItem {
+    font-weight: bold;
+  }
+}

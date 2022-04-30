@@ -6,15 +6,30 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --verbose false --silent",
+    "test:dev": "jest --watch"
   },
   "dependencies": {
+    "@testing-library/user-event": "^14.1.1",
+    "axios": "^0.27.2",
+    "classnames": "^2.3.1",
+    "lodash.debounce": "^4.0.8",
+    "lodash.isempty": "^4.4.0",
     "next": "12.1.5",
+    "node-sass": "^7.0.1",
+    "prop-types": "^15.8.1",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.51.0"
   },
   "devDependencies": {
-    "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5"
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "eslint": "^8.14.0",
+    "eslint-config-next": "12.1.5",
+    "jest": "^28.0.3",
+    "prettier": "^2.6.2"
   }
 }

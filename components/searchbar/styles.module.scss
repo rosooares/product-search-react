@@ -1,0 +1,38 @@
+@import "../../commons//styles/variables.scss";
+@import "../../commons/styles/colors.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+
+.inputWrapper {
+  background: $white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-top-left-radius: $border;
+  border-bottom-left-radius: $border;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  & input {
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+}
+
+.searchButton {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-top-right-radius: $border;
+  border-bottom-right-radius: $border;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
