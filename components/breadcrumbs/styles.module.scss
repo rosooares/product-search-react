@@ -24,3 +24,9 @@
     font-weight: bold;
   }
 }
+
+@media (max-width: 900px) {
+  .breadcrumbs {
+    width: 100%;
+  }
+}

@@ -43,7 +43,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 65%;
+  width: 60%;
 
   & img {
     width: 90%;
@@ -70,5 +70,13 @@
   & h1 {
     font-size: $font-size-description-title;
     font-weight: normal;
+  }
+}
+
+@media (max-width: 900px) {
+  .detailsWrapper,
+  .productData,
+  .thumb {
+    width: 100%;
   }
 }

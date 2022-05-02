@@ -3,3 +3,9 @@
 .containerItems {
   width: $container-size;
 }
+
+@media (max-width: 900px) {
+  .containerItems {
+    width: 100%;
+  }
+}

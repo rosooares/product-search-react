@@ -36,9 +36,14 @@
     }
 
     .price {
+      display: flex;
       font-size: $font-size-main-title;
       font-weight: 400;
       margin-bottom: $space-large;
+    }
+
+    .shipping {
+      margin-left: 10px;
     }
   }
 

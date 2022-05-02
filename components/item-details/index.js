@@ -1,3 +1,5 @@
+import Image from "next/image";
+import DefaultImg from "../../assets/default_image.png";
 import PropTypes from "prop-types";
 import Breadcrumbs from "../breadcrumbs";
 import BuyButton from "../buy-button";
@@ -5,8 +7,15 @@ import Card from "../card";
 import Loading from "../loading";
 import styles from "./styles.module.scss";
 
+const ImageItem = ({ urlImage }) => {
+  if (urlImage) {
+    return <img src={urlImage} alt="" />;
+  }
+  return <Image src={DefaultImg} alt="" />;
+};
+
 function ItemDetail({ categories, item, itemDescription, loading }) {
-  const image = item?.pictures?.shift()?.url || "";
+  const urlImage = item?.pictures?.shift()?.url;
 
   return (
     <div className={styles.wrapper}>
@@ -17,7 +26,7 @@ function ItemDetail({ categories, item, itemDescription, loading }) {
           <Card>
             <div className={styles.productDetail}>
               <div className={styles.thumb}>
-                <img src={image} alt="" />
+                <ImageItem urlImage={urlImage} />
               </div>
               <div className={styles.productData}>
                 <p>Nuevo - {item?.sold_quantity} vendidos</p>
